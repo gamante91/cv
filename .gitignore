@@ -1,5 +1,6 @@
 # Files generated after compilation
-*.jpg
+*.pdf
+*.out
 *.aux
 *.log
 *.gz
