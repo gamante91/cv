@@ -1,0 +1,5 @@
+# Files generated after compilation
+*.jpg
+*.aux
+*.log
+*.gz
