@@ -1,3 +1,6 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+
 \documentclass[a4paper,10pt]{article}
 
 \usepackage{helvet}
@@ -8,7 +11,7 @@
 \addtolength{\voffset}{+0.1cm}
 \usepackage{graphicx}
 \usepackage{geometry}
-\geometry{a4paper, left=15mm, right=15mm, top=15mm, bottom=1m}
+\geometry{margin=0.5in}
 \usepackage{hyperref}
 \definecolor{linkcolour}{rgb}{0,0,0}
 \hypersetup{colorlinks,breaklinks=linkcolour,urlcolor=linkcolour,linkcolor=linkcolour}
@@ -22,88 +25,88 @@
 	
 	\pagestyle{empty}
 
-	\begin{minipage}{.65\textwidth}
-		\vspace{-5mm}
+	\begin{minipage}{.75\textwidth}
+		\vspace{-10mm}
 		\begin{flushleft}
-			\section{\Huge Giacomo Amante}	
+			\section{\Huge Giacomo Amante}
+			\vspace{2mm}
 			\begin{tabular}{ll}
-				\textsc{Place and Date of Birth:} & \href{https://www.google.com/maps/place/milano}{Milano, Italy} | 24 February 1991 \\
-				\textsc{Current Address:} & \href{https://www.google.it/maps/place/2+Passage+du+Chemin+Vert,+75011+Paris/@48.8597221,2.3725467,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66df96ea289b5:0xdb763fce45ffb863!8m2!3d48.8597221!4d2.3747354}{2T Passage du Chemin Vert, Paris, France}\\
-				%\textsc{Phone:} & +33 7 83 43 18 87\\
 				\textsc{email:} & \href{mailto:amantegiacomo@gmail.com}{amantegiacomo@gmail.com} \\
 				\textsc{Linkedin:} & 
 				\href{http://www.linkedin.com/in/giacomoamante}{\color{black}linkedin.com/in/giacomoamante}\\
 				\textsc{GitHub:} & \href{https://github.com/gamante91}{github.com/gamante91}\\
 				\multicolumn{2}{c}{} \\
-			\end{tabular}				
+			\end{tabular}
 		\end{flushleft}
-	\end{minipage}%
-	\hspace{10mm}%
+	Robotics Engineering background, professional experience as Software Developer,\\
+	passionate about Artificial Intelligence and Machine Learning\\
+	\end{minipage}
 	\begin{minipage}[c]{.25\textwidth}
 		\begin{flushright}
-			\includegraphics[width=.70\textwidth]{GiacomoAmante_lowres}
+			\includegraphics[width=.55\textwidth]{GiacomoAmante_lowres}
 		\end{flushright}
 	\end{minipage}
 
 	\vspace{-5mm}
 
 	\section{Work Experience}
-	\begin{tabular}{p{2cm}|p{13.8cm}}
+	\begin{tabular}{p{1.7cm}|p{14.5cm}}
+		\centering\textsc{Sep 2018} &
+		\textsc{Software Developer (C++, GNU/Linux, Windows, Backend)} \\
+		\centering\emph{\textsc{Current}} &
+		\textsc{\textbf{\href{http://www.amadeus.com/}{Murex}}}  \hfill Paris, France\\
+		& Murex provides technological solutions for capital markets such as integrated trading, risk management and treasury.\\
+		& I am working as Software Developer in the Collateral Management and Securities Finance team.\\
+		& \textbf{Technologies used:} C++11, STL, Boost, Hibernate, GNU/Linux, GTest\\
+		& \textbf{Tools:} Perforce, Git, Jenkins, Microsoft Visual Studio, Bitbucket, Jira, Confluence\\
+		
+		\multicolumn{2}{c}{} \\
 		\centering\textsc{Jan 2017} &
-		\textsc{Software Developer (C++, Linux, Backend)} \\
+		\textsc{Software Developer (C++, GNU/Linux, Backend)} \\
 		\centering\emph{\textsc{July 2018}} &
-		\textsc{\textbf{\href{http://www.amadeus.com/}{Amadeus IT Group}}}, as external consultant (\textsc{\textbf{Alten}}), \hfill Nice, France\\
-		& Amadeus is ranked among the Top 10 IT Companies in the world, $2^{nd}$ in Europe.\\
-		& The company provides search, pricing, booking, ticketing and other services in real-time to travel providers and agencies.\\
-		& Within this context, I worked as Software Developer on the analysis, development and testing of software deployed on distributed Linux backends.\\
-		& \textbf{Technologies used:} C++, STL, Boost, GNU/Linux, Python, GoogleTest\\
-		& \textbf{Tools:} Mercurial, GIT, Jenkins, Bitbucket, Jira, Confluence\\
-		%& \textbf{Methodology:} Agile, Kanban\\
+		\textsc{\textbf{\href{http://www.amadeus.com/}{Amadeus IT Group}}}, as external consultant (\textsc{Alten}) \hfill Nice, France\\
+		& Amadeus provides search, pricing, booking, ticketing and other services in real-time to travel providers (airline and rail companies, hotels) and travel agencies.\\
+		& Within this context, I worked as Software Developer on topics like fraud detection (Amadeus Booking Intelligence), availability computation and booking management.\\		
+		& \textbf{Technologies used:} C++11, STL, Boost, GNU/Linux, GTest\\
+		& \textbf{Tools:} Mercurial, Git, Jenkins, Bitbucket, Jira, Confluence\\
 
 		\multicolumn{2}{c}{} \\
 		\centering\textsc{Jan 2016 } & 
 		\textsc{Master Thesis (Safe Human-Robot Interaction)} \\
 		\centering\textsc{Dec 2016} &
-		\textsc{\textbf{\href{http://merlin.dei.polimi.it/}{MERLIN Lab @ PoliMi} / \href{http://smartrobots.it/en/}{Smart Robots}}}, \hfill Milano, Italy\\
+		\textsc{\textbf{\href{http://merlin.dei.polimi.it/}{MERLIN Lab @ PoliMi} / \href{http://smartrobots.it/en/}{Smart Robots}}} \hfill Milan, Italy\\
 		& \textbf{Supervisors: \href{http://home.deib.polimi.it/rocco/}{Prof. Paolo Rocco}, \href{https://home.deib.polimi.it/zanchettin/index.html}{Prof. Andrea Maria Zanchettin}}\\
 		& In the framework of Safe Human-Robot Cooperation, the thesis objective was to design a supervisor to enhance the robot's perception of the surroundings.\\
 		& This was achieved using 3D Cameras, Sensor Fusion and Artificial Intelligence Algorithms.\\
 		& The thesis was developed in cooperation with \textbf{\href{http://smartrobots.it/en/}{Smart Robots}}, a Milan-based startup which specializes in developing Artificial Intelligence solutions for Industrial Robotics.\\
-		& \textbf{Technologies used:}  C++, MATLAB, Microsoft Kinect API\\
-		& \textbf{Domains:} Human-Robot Interaction, Artificial Intelligence, Robotics, Computer Vision\\
-		\multicolumn{2}{c}{} \\
+		& \textbf{Technologies used:}  C++11, MATLAB, Microsoft Kinect\\
+		& \textbf{Domain:} Human-Robot Interaction, Artificial Intelligence, Robotics, Computer Vision\\
+	\end{tabular}
+
+	\section{Certifications}
+	\begin{tabular}{p{1.7cm}|p{14.5cm}}
+		\centering\textsc{Jul 2018} &
+		\href{https://www.coursera.org/account/accomplishments/certificate/PHU5XX9EQ5LP}{\textbf{\textsc{Machine Learning}}, \textsc{Stanford University} provided on \textsc{Coursera}} \\
+		\centering\textsc{Aug 2018} &
+		\href{https://www.coursera.org/account/accomplishments/specialization/certificate/MQRAWL6XD2QW}{\textbf{\textsc{Deep Learning Specialization}}, \textsc{deeplearning.ai} provided on \textsc{Coursera}} \\
 	\end{tabular}
 
 	\section{Education}
-		\begin{tabular}{p{2cm}|p{13.8cm}}
-			\centering\textsc{2014 / 2016} & \textbf{Master of Science} in \textsc{Automation and Control Engineering}, \hfill \textsc{110/110} \\ 
-			&\textbf{Politecnico di Milano}, Milano, Italy\\
-			&\\
-
-			\noindent\textsc{2010 / 2014} & \textbf{Bachelor of Science} in \noindent
-			\textsc{Automation and Control Engineering}, \hfill \textsc{102/110} \\
-			& \textbf{Politecnico di Milano}, Milano, Italy\\
-			&\\
-
-			\centering\textsc{Spring} & \textbf{ATHENS} programme in \textsc{Emergence in Complex Systems}\\
-			\centering\textsc{2016}& 
-			\textbf{Telecom ParisTech}, Paris, France\\
-			&\\
-
-			\centering\textsc{Summer} & \textbf{Summer School} programme in \textsc{3D Printing and Digital Fabrication}\\
-			\centering\textsc{2015}& 
-			\textbf{St. Petersburg Polytechnic University}, Saint Petersburg, Russia\\
-			&\\
+		\begin{tabular}{p{1.7cm}|p{14.5cm}}	
+			\centering\textsc{2010} & \textbf{Politecnico di Milano}, Milano, Italy\\
+			\centering\textsc{2016} & \textbf{BSc} and \textbf{MSc} in \textsc{\href{http://www.polinternational.polimi.it/educational-offer/laurea-magistrale-equivalent-to-master-of-science-programmes/automation-and-control-engineering/}{Automation and Control Engineering}} \hfill final grade: \textsc{110/110} \\ 
+			
+			\multicolumn{2}{c}{} \\
+			\centering\textsc{Spring} & \textbf{Telecom ParisTech}, Paris, France\\
+			\centering\textsc{2016}   &  \textbf{Athens} programme in \textsc{\href{http://www.athensprogramme.com/catalog/show/1640}{Emergence in Complex Systems}}\\
+			
+			\multicolumn{2}{c}{} \\
+			\centering\textsc{Summer} & \textbf{St. Petersburg Polytechnic University}, Saint Petersburg, Russia\\
+			\centering\textsc{2015}      & \textbf{Summer School} programme in \textsc{3D Printing and Digital Fabrication}\\
 		\end{tabular}
 
-	\section{Certifications}
-	\begin{tabular}{p{2cm}|p{13.8cm}}
-		\centering\textsc{July 2018} &
-		\href{https://www.coursera.org/account/accomplishments/verify/PHU5XX9EQ5LP}{\textbf{\textsc{Machine Learning}}, \textsc{Stanford University} on \textsc{Coursera}} \\
-	\end{tabular}
-
 	\section{Languages}
-	\textsc{English} (Fluent), \textsc{French} (General Professional Proficiency), \textsc{Italian} (Mothertongue)
+	Italian, English, French
 
 	\section{Interests and Activities}
 	Robotics, Artificial Intelligence, Algorithms, Machine Learning, Technology, Open-Source, Travelling, Jogging, Piano\\
