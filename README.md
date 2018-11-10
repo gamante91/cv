@@ -1,2 +1,4 @@
 # Curriculum Vitae
-My Curriculum Vitae in LaTeX, it needs to be compiled with XeLaTeX
+
+This is my most updated CV, please use XeLaTex to compile it
+![alt text](https://www.duplicatesink.com/8891Duplic/data/test.png)
