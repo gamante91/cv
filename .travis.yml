@@ -1,4 +1,3 @@
-sudo: required
 branches:
   only:
     - master
@@ -16,8 +15,7 @@ before_deploy:
       - git tag $TRAVIS_TAG
 deploy:
   provider: releases
-  api_key:
-    secure: 7390865254cf471b70890abf3f8b9561f5346a0d
+  api_key: ${api_key}
   file: "build/GiacomoAmante.pdf"
   cleanup: true
   draft: false
