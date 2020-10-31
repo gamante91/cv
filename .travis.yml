@@ -8,6 +8,8 @@ services:
 before_install:
   - docker pull blang/latex:ubuntu
 script:
-
-  - exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex:ubuntu latexmk -xelatex -interaction=nonstopmode -halt-on-error GiacomoAmante.tex -outdir=./_build”
-  - pdflatex GiacomoAmante.tex
+  - exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex:ubuntu latexmk -xelatex -interaction=nonstopmode -halt-on-error GiacomoAmante.tex -outdir=./build”
+before_deploy:
+  - git config --local user.name "gamante91"
+  - git config --local user.email "my-email"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
