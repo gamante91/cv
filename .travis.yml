@@ -1,0 +1,11 @@
+sudo: required
+branches:
+  only:
+    - master
+language: latex
+services:
+  - docker
+before_install:
+  - docker pull blang/latex:ubuntu
+script:
+  - make docker-pdf
