@@ -7,14 +7,15 @@ services:
 before_install:
   - docker pull blang/latex:ubuntu
 script:
-  - exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex:ubuntu latexmk -xelatex -interaction=nonstopmode -halt-on-error GiacomoAmante.tex -outdir=”
+  - exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex:ubuntu latexmk -xelatex -interaction=nonstopmode -halt-on-error GiacomoAmante.tex -outdir=./build”
 before_deploy:
   - git config --local user.name "gamante91"
   - git config --local user.email "amantegiacomo@gmail.com"
   - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-  - git tag $TRAVIS_TAG
+  - git tag $TRAVIS_TAG -a -m "Generated tag from TravisCI"
 deploy:
   provider: releases
   api_key: "$api_key"
-  file: "GiacomoAmante.pdf"
+  file_glob: true
+  file: build/*.pdf
   cleanup: false
