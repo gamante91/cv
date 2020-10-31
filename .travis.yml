@@ -15,9 +15,9 @@ before_deploy:
       - git tag $TRAVIS_TAG
 deploy:
   provider: releases
-  api_key: ${api_key}
+  api_key: '$api_key'
   file: "build/GiacomoAmante.pdf"
-  cleanup: true
+  skip_cleanup: true
   draft: false
   prerelease: false
   on:
