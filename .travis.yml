@@ -1,7 +1,6 @@
 branches:
   only:
     - master
-language: latex
 services:
   - docker
 before_install:
