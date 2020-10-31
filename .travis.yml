@@ -8,4 +8,4 @@ services:
 before_install:
   - docker pull blang/latex:ubuntu
 script:
-  - make docker-pdf
+  - pdflatex GiacomoAmante.tex
