@@ -20,5 +20,3 @@ deploy:
   cleanup: false
   draft: false
   prerelease: false
-  on:
-    tags: true
