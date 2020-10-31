@@ -17,7 +17,7 @@ deploy:
   provider: releases
   api_key: '$api_key'
   file: "build/GiacomoAmante.pdf"
-  skip_cleanup: true
+  cleanup: false
   draft: false
   prerelease: false
   on:
