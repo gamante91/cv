@@ -6,7 +6,7 @@ before_install:
 script:
   - docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex:ubuntu latexmk -xelatex -interaction=nonstopmode -halt-on-error GiacomoAmante.tex -outdir=./build
 before_deploy:
-  - pwd
+  - echo $github-token
   - ls -a
 deploy:
   provider: pages
