@@ -6,9 +6,6 @@ before_install:
 script:
 - docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex:ubuntu
   latexmk -xelatex -interaction=nonstopmode -halt-on-error GiacomoAmante.tex -outdir=./build
-before_deploy:
-- echo $github-token
-- ls -a
 deploy:
   provider: releases
   api_key:
@@ -16,4 +13,4 @@ deploy:
   file: build/GiacomoAmante.pdf
   on:
     repo: gamante91/cv
-  skip_cleanup: 'true'
+  cleanup: 'false'
