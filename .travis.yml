@@ -15,7 +15,6 @@ deploy:
   provider: releases
   api_key:
     secure: L4g+LLQwnHKwvO0qyfwRGtZsHCainBe/Rr/dx9lwgQTfZgGx6dZmx4WR60edG7D8JTphW/mk1HT4NW5s94P//qma2y3xviw9XGSqdOUKxiKykKfi7qIhqwOvyv630bBCR3+9LA9BSTpskDzHlp2B7m+QobQSHl2Y15TFNTJV+sCZhYwLyNF789snMtvAfKRytTiNGVBqZnNkBI/NYTSOHGbgFp+YSLlJWHD9zonsIDtiyA8I9FTB5fZ2iYw2cTv9QD3TTPH8p5y+z/2nA6IK6gpiepjZ9JqQ/tsWOhzjs1fgHitJYjCpc/pS00sN7k/UiqmT+7+nUR06/CNGtSt9xl1PoHRCCn6UB0yQxcRE9GxLjwxGd7ZWIk/Ki12lyX6Opuv83EINSLlv5H4GDaYC7UoDEIgeFVPU5L47kMch7Qy+SIoB44McT1MUbQfkzY7ln2sCiCWi8RDDoCZOdkR3rD1YooqdeF76G+d+3zf7xviFKwZtWy50ujKmnPAOGxLQRZ6+6NXl5GqgJzwoKx/1jORplz5ryv83Bd/6JaO/ucyl1Ifb+ELgv6zWq/GKNPzx2oBVkL9KQTgnjdQfAHtMA8mFaT0gAsCyQMu0TMLZjHNMqIcMJ/+6buJoPnERjDczvE0euFZqREGsR2XCnTlVGfexZPmYdMVlFAy/ZbuhFjQ=
-  file: build/GiacomoAmante.pdf
-  on:
-    repo: gamante91/cv
+  file:
+    - build/GiacomoAmante.pdf
   cleanup: false
