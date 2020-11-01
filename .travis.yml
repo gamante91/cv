@@ -18,3 +18,5 @@ deploy:
   api_key: "$api_key"
   file_glob: true
   file: build/*.pdf
+  on:
+    tags: true
