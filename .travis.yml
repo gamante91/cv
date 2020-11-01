@@ -1,14 +1,12 @@
-branches:
-  only:
-    - master
+language: generic
 services:
   - docker
 before_install:
-  - docker pull blang/latex:ubuntu
+  - docker pull dxjoke/tectonic-docker
   - pwd
   - ls -a
 script:
-  - exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex:ubuntu latexmk -xelatex -interaction=nonstopmode -halt-on-error GiacomoAmante.tex -outdir=./build”
+  - docker run --mount src=$TRAVIS_BUILD_DIR/src,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic GiacomoAmante.tex"
   - ls -a
 before_deploy:
   - pwd
