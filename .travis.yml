@@ -5,7 +5,6 @@ before_install:
   - docker pull blang/latex:ubuntu
 script:
   - docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex:ubuntu latexmk -xelatex -interaction=nonstopmode -halt-on-error GiacomoAmante.tex -outdir=./build
-  - ls -a
 before_deploy:
   - pwd
   - ls -a
@@ -17,6 +16,3 @@ deploy:
     branch: master
   target_branch: gh-pages
   local_dir: build
-after_deploy:
-  - pwd
-  - ls
