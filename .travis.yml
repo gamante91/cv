@@ -11,7 +11,7 @@ deploy:
   provider: pages
   cleanup: false
   keep_history: true
-  api_key: $github-token
+  github-token: "$github-token"
   local_dir: build
   on:
     branch: master
