@@ -7,12 +7,16 @@ before_install:
   - docker pull blang/latex:ubuntu
 script:
   - exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex:ubuntu latexmk -xelatex -interaction=nonstopmode -halt-on-error GiacomoAmante.tex -outdir=./build”
+  - ls -a
+before_deploy:
+  - pwd
+  - ls -a
 deploy:
   provider: pages
   cleanup: false
   keep_history: true
   github-token: $github-token
-  local_dir: build
-  target_branch: gh-pages
+  file: 
+    - build/GiacomoAmante.pdf
   on:
     branch: master
