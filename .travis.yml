@@ -10,7 +10,8 @@ script:
 deploy:
   provider: pages
   cleanup: false
+  keep_history: true
   api_key: "$api_key"
-  file: build/*.pdf
+  local_dir: build
   on:
     branch: master
